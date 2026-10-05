@@ -12,7 +12,6 @@ import traceback
 import robosuite
 import robocasa
 from pathlib import Path
-import robocasa.utils.lerobot_utils as LU
 
 from robocasa.scripts.dataset_scripts.playback_utils import (
     resolve_instruction_from_ep_meta,
@@ -246,6 +245,8 @@ def playback_dataset(
             "Use playback_dataset_hdf5.py with an HDF5 dataset that contains "
             "an actions_abs field."
         )
+
+    import robocasa.utils.lerobot_utils as LU
 
     dataset = Path(dataset)
     # some arg checking
